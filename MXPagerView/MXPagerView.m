@@ -313,10 +313,10 @@
     if (!fmod(contentOffset.x, self.bounds.size.width)) {
         NSInteger index = contentOffset.x /self.bounds.size.width;
         
+        _index = index;
+        
         [self willMovePageToIndex:index];
         [super setContentOffset:contentOffset animated:animated];
-        
-        _index = index;
         
         if(!animated) {
             [self didMovePageToIndex:index];
